@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Require Puntuaciones routes
-require('./MongoFallero/app/routes/puntuaciones.routes.js')(app);
+require('./MongoFallero/app/routes/puntuaciones.route.js')(app);
 
 
 // Escuchemos en un puerto
