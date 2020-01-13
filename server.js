@@ -5,7 +5,7 @@ const app = express();
 const map = require('proj4');
 
 // Nos conectaremos a la base de datos
-const dbConfig = require('./config/database.config');
+const dbConfig = require('./MongoFallero/config/database.config');
 const mongoose = require('mongoose');
 
 // Utilizaremos body-parser para "parsear lo que nos pidan"
@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Require Puntuaciones routes
-require('./app/routes/puntuaciones.routes.js')(app);
+require('./MongoFallero/app/routes/puntuaciones.routes.js')(app);
 
 
 // Escuchemos en un puerto
