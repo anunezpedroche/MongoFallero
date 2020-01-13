@@ -29,7 +29,7 @@ mongoose.connect(dbConfig.url,{
 */
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://adminFallero:mongo1234@cluster0-yzrtq.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://adminFallero:mongo1234@cluster0-yzrtq.mongodb.net/test";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("mongofallero").collection("mongofallero");
