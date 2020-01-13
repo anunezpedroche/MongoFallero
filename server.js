@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-/*mongoose.Promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 mongoose.connect(dbConfig.url,{
     useNewUrlParser:true}).then(()=>{
@@ -26,16 +26,16 @@ mongoose.connect(dbConfig.url,{
         console.log("Algo ha pasado...saliendo : ",err);
         process.exit();
     });
-*/
 
-const MongoClient = require('mongodb').MongoClient;
+
+/*const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://adminFallero:mongo1234@cluster0-yzrtq.mongodb.net/test";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("mongofallero").collection("mongofallero");
   // perform actions on the collection object
   client.close();
-});
+});*/
 // Paginas publicas (estaticas)
 
 app.use(express.static(path.join(__dirname, 'MongoFallero/public')));
