@@ -1,7 +1,7 @@
 //Variables globales
 let opciones = document.createElement("select");
 let respuestaFallitas;
-let url = 'http://mapas.valencia.es/lanzadera/opendata/Monumentos_falleros/JSON';
+let url = 'https://mapas.valencia.es/lanzadera/opendata/Monumentos_falleros/JSON';
 let ipCliente;
 
 
