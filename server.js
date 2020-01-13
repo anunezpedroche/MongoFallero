@@ -35,7 +35,7 @@ mongoose.connect(dbConfig.url,{
 // });
 
 // Paginas publicas (estaticas)
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'MongoFallero/public')));
 
 
 // Require Puntuaciones routes
