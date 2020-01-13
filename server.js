@@ -9,7 +9,7 @@ if(port==null|| port==""){
 }
 
 //Conexión MongoDB
-const dbConfig = require('./MongoFallero/config/database.config');
+const dbConfig = require('MongoFallero/config/database.config');
 const mongoose = require('mongoose');
 
 app.use(bodyParser.urlencoded({
