@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MongoFallero</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.0/proj4.js"></script>
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://kit.fontawesome.com/5375db3687.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+    <style>@import url('style/style.css');</style>
+</head>
+<body>
+    <div class="container">
+    
+        
+    <label class="button" for="burguerMenu"><div class="button" id="menu"></div></label>
+    <input type="checkbox" id="burguerMenu">
+    <nav id="superior">
+        <div id="logo"></div>
+        <div class="filtro">
+            <form class="filters">
+                <input type="radio" id="principal" name="tipoFalla" checked>
+                <label for="principal">Principal</label>
+                <input type="radio" id="infantil" name="tipoFalla">
+                <label for="infantil">Infantil</label>
+                <br>
+                Año de fundación:<br>
+                <input type="text" id="desde" placeholder="Desde"><br>
+                <input type="text" id="hasta" placeholder="Hasta"><br><br>
+            </form>
+        </div>
+    </nav>    
+        
+            
+
+
+    <div class="resultados"></div>
+</div>
+</body>
+</html>

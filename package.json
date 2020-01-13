@@ -1,0 +1,30 @@
+{
+  "name": "express-vanilla",
+  "version": "1.0.0",
+  "description": "Un Servidor NodeJS Simple",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -watch scss -o \"public/css/\"",
+    "jefe": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Simple",
+    "Server"
+  ],
+  "author": "DAW Para MiniServidores",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.4.1",
+    "mongoose": "^5.8.7",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.2",
+    "proj4": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

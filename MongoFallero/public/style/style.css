@@ -1,0 +1,191 @@
+body {
+  background-color: #a00126;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
+
+#logo {
+  display: none; }
+
+#menu {
+  display: block;
+  margin: auto;
+  content: url("../img/evilcorp.png"); }
+
+.button#menu {
+  height: 100px;
+  width: 100px;
+  display: none; }
+  @media all and (max-width: 500px) {
+    .button#menu {
+      display: block; } }
+
+#burguerMenu {
+  display: none; }
+
+#burguerMenu:checked + #superior {
+  display: block; }
+
+img#menu {
+  width: 20px;
+  height: 20px; }
+
+#superior {
+  background-color: #ec2050;
+  margin-left: -10%;
+  width: 121%; }
+  @media all and (max-width: 500px) {
+    #superior {
+      display: none; } }
+  #superior .filtro {
+    margin-left: 15%; }
+  #superior form {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    @media all and (max-width: 500px) {
+      #superior form {
+        flex-direction: column; } }
+
+.resultados {
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: #ce0231;
+  display: grid,flexbox;
+  width: 70%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  margin-top: 10px; }
+
+.fallas {
+  background-color: #f0bbc8;
+  box-shadow: 3px 3px 5px white;
+  border: 2px solid black;
+  border-radius: 2px;
+  margin: 5px;
+  height: 95%;
+  text-align: center; }
+  .fallas img {
+    height: 80%;
+    width: 100%; }
+  .fallas form {
+    direction: rtl;
+    unicode-bidi: bidi-override; }
+  .fallas input[type="radio"] {
+    display: none; }
+  .fallas label {
+    font-size: 20px;
+    color: grey; }
+  .fallas label:hover {
+    color: red; }
+  .fallas label:hover ~ label {
+    color: red; }
+  .fallas input[type="radio"]:checked ~ label {
+    color: red; }
+
+.fallas:hover {
+  opacity: 1; }
+
+.filtro {
+  margin: 5px; }
+  .filtro input {
+    margin-top: 5px;
+    padding: 5px; }
+
+#fullScreen {
+  height: 100%;
+  width: 100%;
+  background: grey;
+  opacity: 0.9;
+  position: absolute; }
+
+#fullScreen #map {
+  width: 300px;
+  height: 500px;
+  box-shadow: 5px 5px 5px #888;
+  margin-top: 8%;
+  margin-left: auto;
+  margin-right: auto; }
+
+#fullScreen i {
+  margin-left: 48%;
+  margin-top: 11%;
+  font-size: 45px; }
+
+@media (min-width: 500px) {
+  #logo {
+    display: flex;
+    margin-left: 10%;
+    width: 100px;
+    height: 100px;
+    content: url("../img/evilcorp.png"); }
+
+  .filtro {
+    display: flex; }
+
+  .filters {
+    align-items: right; }
+
+  #desde {
+    align-items: right; }
+
+  .resultados {
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #ce0231;
+    display: grid,flexbox;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center; }
+
+  .fallas {
+    background-color: #f0bbc8;
+    box-shadow: 3px 3px 5px white;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 5px;
+    opacity: 0.7;
+    text-align: center; }
+    .fallas img {
+      height: 90%;
+      width: 100%; }
+    .fallas form {
+      direction: rtl;
+      unicode-bidi: bidi-override; }
+    .fallas input[type="radio"] {
+      display: none; }
+    .fallas label {
+      color: grey;
+      font-size: 25px; }
+    .fallas label:hover {
+      color: red; }
+    .fallas label:hover ~ label {
+      color: red; }
+    .fallas input[type="radio"]:checked ~ label {
+      color: red; }
+
+  #fullScreen {
+    height: 100%;
+    width: 100%;
+    background: grey;
+    opacity: 0.9;
+    position: absolute; }
+
+  #fullScreen #map {
+    width: 50%;
+    height: 70%;
+    margin-top: 3%;
+    margin-left: 25%; }
+
+  #fullScreen i {
+    margin-left: 22.5%;
+    margin-top: 3%;
+    font-size: 45px; } }
+
+/*# sourceMappingURL=style.css.map */

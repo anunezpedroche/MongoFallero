@@ -1,0 +1,254 @@
+
+$empresa:evilcorp;
+$colorEstrella: '';
+$fondo: '';
+$logo: '';
+$colorContenedor:'';
+$colorFallas:'';
+$colorSombra:'';
+$colorMenu: '';
+
+@if ($empresa == evilcorp){
+    $colorContenedor: #ce0231;
+    $colorFallas: #f0bbc8;
+    $colorEstrella : red;
+    $fondo: #a00126;
+    $logo: "../img/evilcorp.png";
+    $colorSombra: white;
+    $colorMenu: #ec2050;
+}@else if($empresa == starbread){
+    $colorContenedor: #49a351;
+    $colorFallas: #ffffff;
+    $colorEstrella : green;
+    $fondo: #2e6d34;
+    $logo: "../img/cthulhu.png";
+    $colorSombra: black;
+    $colorMenu: #68f27a;
+}
+
+body{
+    background-color: $fondo;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+$media_tablet: 500px;
+
+#logo{
+    display:none;
+}
+
+#menu{
+    display: block;
+    margin: auto;
+    content: url($logo);
+}
+
+.button#menu {
+    height: 100px;
+    width: 100px;
+	display: none;
+	@media all and (max-width: $media_tablet) {
+		display: block;
+	}
+}
+#burguerMenu{
+    display: none;
+}
+#burguerMenu:checked + #superior {
+    display: block;
+}
+
+img#menu{
+    width: 20px;
+    height: 20px;
+}
+#superior {
+    background-color: $colorMenu;
+    margin-left: -10%;
+    width: 121%;
+	@media all and (max-width: $media_tablet) {
+		display: none;
+    }
+    .filtro{
+        margin-left: 15%;
+    }
+	form {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@media all and (max-width: $media_tablet) {
+			flex-direction: column;
+		}
+		}
+	}
+.resultados{
+        border-radius: 5px;
+        border: 2px solid black;
+        background-color: $colorContenedor;
+        display: grid,flexbox;
+        width: 70%;
+        height: 80%;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        padding: 20px;
+        justify-content: center;
+        margin-top: 10px;
+        
+}
+
+.fallas{
+    background-color: $colorFallas;
+    box-shadow: 3px 3px 5px $colorSombra;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 5px;
+    height: 95%;
+    img{
+        height: 80%;
+        width: 100%;
+    }
+    //opacity: 0.7;
+    text-align: center;
+    form{
+        direction:rtl;
+        unicode-bidi: bidi-override;
+    }
+    input[type="radio"]{
+        display: none;
+    }
+    label{
+        font-size: 20px;
+        color:grey;
+    }
+    
+    label:hover{
+        color:$colorEstrella;
+    }
+    
+    label:hover ~ label{
+        color:$colorEstrella;
+    }
+    input[type = "radio"]:checked ~ label{color:$colorEstrella;}
+}
+
+.fallas:hover{
+    opacity: 1;
+    //font-weight: 500;
+}
+
+.filtro{
+    input{
+        margin-top:5px;
+        padding: 5px;
+    }
+    margin: 5px;
+}
+
+#fullScreen {
+    height: 100%;
+    width: 100%;
+    background: grey;
+    opacity: 0.9;
+    position: absolute; }
+    #fullScreen #map {
+      width: 300px;
+      height: 500px;
+      box-shadow: 5px 5px 5px #888;
+      margin-top: 8%;
+      margin-left: auto;
+      margin-right: auto; }
+    #fullScreen i {
+      margin-left: 48%;
+      margin-top: 11%;
+      font-size: 45px; }
+    
+@media(min-width:500px){
+
+#logo{
+    display:flex;
+    margin-left: 10%;
+    width: 100px;
+    height: 100px;
+    content: url($logo);
+}
+
+.filtro{
+    display: flex;
+}
+.filters{
+    align-items:right;
+}
+
+#desde{
+    align-items: right;
+}
+
+#hasta{
+
+}
+
+.resultados{
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: $colorContenedor;
+    display: grid,flexbox;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+        
+}
+
+.fallas{
+    background-color: $colorFallas;
+    box-shadow: 3px 3px 5px $colorSombra;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin: 5px;
+    img{
+        height: 90%;
+        width: 100%;
+    }
+    opacity: 0.7;
+    text-align: center;
+    form{
+        direction:rtl;
+        unicode-bidi: bidi-override;
+    }
+    input[type="radio"]{
+        display: none;
+    }
+    label{
+        color:grey;
+        font-size: 25px;
+    }
+    
+    label:hover{
+        color:$colorEstrella;
+    }
+    
+    label:hover ~ label{
+        color:$colorEstrella;
+    }
+    input[type = "radio"]:checked ~ label{color:$colorEstrella}
+}
+
+    #fullScreen {
+        height: 100%;
+        width: 100%;
+        background: grey;
+        opacity: 0.9;
+        position: absolute; }
+        #fullScreen #map {
+          width: 50%;
+          height: 70%;
+          margin-top: 3%;
+          margin-left: 25%; }
+        #fullScreen i {
+          margin-left: 22.5%;
+          margin-top: 3%;
+          font-size: 45px; } 
+}
