@@ -2,15 +2,16 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const bodyParser = require('body-parser');
-
+const dbConfig = require('MongoFallero/config/database.config');
+const mongoose = require('mongoose');
 let port = process.env.PORT;
+
 if(port==null|| port==""){
     port = 3000;
 }
 
 //Conexión MongoDB
-const dbConfig = require('MongoFallero/config/database.config');
-const mongoose = require('mongoose');
+
 
 app.use(bodyParser.urlencoded({
     extended:true
