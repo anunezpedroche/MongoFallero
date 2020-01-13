@@ -27,6 +27,8 @@ mongoose.connect(dbConfig.url,{
         process.exit();
     });
 
+
+
 // // Vamos a definir un "punto de inicio"
 // app.get('/api/',(req,res)=>{
 //     res.json({"message":"API de MongoFallero"});

@@ -142,7 +142,7 @@ function buscador(){
                 stars.innerHTML = '★';
                 stars.addEventListener('mouseup',anotarPuntuaciones);
                 stars.addEventListener('mouseover',quitarEstrellas);
-                
+            
                 puntuacion.appendChild(punt);
                 puntuacion.appendChild(stars);
             }
