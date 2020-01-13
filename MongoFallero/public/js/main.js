@@ -113,7 +113,7 @@ function buscador(){
             let sub = document.createElement("input");
             let imgFalla = document.createElement("div");
             let img = document.createElement("img");
-            puntuacion.method='post';
+            puntuacion.method='POST';
             puntuacion.action='/api/puntuaciones/';
 
             sub.type = 'submit';
